@@ -31,8 +31,8 @@ export function Footer() {
           >
             <h3 className="font-serif text-3xl mb-4">El Origen</h3>
             <p className="text-background/60 text-sm leading-relaxed mb-6">
-              Tres generaciones de pasión por la cocina argentina. 
-              Un lugar donde cada plato cuenta una historia.
+              Tres generaciones de pasión por la cocina argentina. Un lugar
+              donde cada plato cuenta una historia.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -88,19 +88,26 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 text-primary" />
                 <span className="text-background/60 text-sm">
-                  Av. Corrientes 1234<br />
+                  Av. Corrientes 1234
+                  <br />
                   Buenos Aires, Argentina
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <Link href="tel:+541155551234" className="text-background/60 hover:text-background text-sm transition-colors">
-                  +54 11 5555-1234
-                </Link>
+                <a
+                  href="https://wa.me/549+351+5143087?text=Hola,%20quiero%20hacer%20una%20reserva%20en%20El%20Origen.%20Personas:%20__%20Día:%20__%20Hora:%20__"
+                  target="_blank"
+                >
+                  Reservar por WhatsApp
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <Link href="mailto:reservas@elorigen.com.ar" className="text-background/60 hover:text-background text-sm transition-colors">
+                <Link
+                  href="mailto:reservas@elorigen.com.ar"
+                  className="text-background/60 hover:text-background text-sm transition-colors"
+                >
                   reservas@elorigen.com.ar
                 </Link>
               </li>
@@ -121,20 +128,26 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 mt-0.5 text-primary" />
                 <div className="text-sm">
-                  <p className="text-background/80 font-medium">Martes a Viernes</p>
-                  <p className="text-background/60">12:00 - 15:30 / 20:00 - 00:00</p>
+                  <p className="text-background/80 font-medium">
+                    Martes a Viernes
+                  </p>
+                  <p className="text-background/60">
+                    12:00 - 15:30 / 20:00 - 00:00
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 mt-0.5 text-primary" />
                 <div className="text-sm">
-                  <p className="text-background/80 font-medium">Sábados y Domingos</p>
-                  <p className="text-background/60">12:00 - 16:00 / 20:00 - 01:00</p>
+                  <p className="text-background/80 font-medium">
+                    Sábados y Domingos
+                  </p>
+                  <p className="text-background/60">
+                    12:00 - 16:00 / 20:00 - 01:00
+                  </p>
                 </div>
               </li>
-              <li className="text-background/40 text-sm mt-4">
-                Lunes cerrado
-              </li>
+              <li className="text-background/40 text-sm mt-4">Lunes cerrado</li>
             </ul>
           </motion.div>
         </div>
@@ -142,7 +155,8 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/40 text-sm">
-            © {new Date().getFullYear()} El Origen. Todos los derechos reservados.
+            © {new Date().getFullYear()} El Origen. Todos los derechos
+            reservados.
           </p>
           <div className="flex gap-6 text-sm text-background/40">
             <Link href="#" className="hover:text-background transition-colors">

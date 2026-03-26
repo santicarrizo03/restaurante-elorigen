@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { ReservaForm } from "./reserva-form";
 
 export function CTA() {
   const ref = useRef(null);
@@ -26,12 +25,12 @@ export function CTA() {
       </div>
 
       {/* Content */}
-      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-white/60 uppercase tracking-[0.3em] text-sm mb-6 font-sans"
+          className="text-white/60 uppercase tracking-[0.3em] text-sm mb-6 font-sans text-center"
         >
           Tu mesa te espera
         </motion.p>
@@ -40,7 +39,7 @@ export function CTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight text-balance"
+          className="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight text-balance text-center"
         >
           Reservá tu lugar en{" "}
           <span className="italic text-primary">nuestra historia</span>
@@ -50,7 +49,7 @@ export function CTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-white/70 text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-white/70 text-lg mb-10 max-w-2xl mx-auto leading-relaxed text-center"
         >
           Cada noche escribimos un nuevo capítulo. Dejanos prepararte una mesa 
           donde los sabores, las risas y los recuerdos se encuentran.
@@ -60,25 +59,9 @@ export function CTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          
         >
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:border-white/60 px-12 py-6 text-base tracking-wide"
-          >
-            <Link href="tel:+541155551234">Llamar Ahora</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-base tracking-wide"
-          >
-            <Link href="https://wa.me/541155551234" target="_blank" rel="noopener noreferrer">
-              WhatsApp
-            </Link>
-          </Button>
+          <ReservaForm />
         </motion.div>
 
         <motion.p
