@@ -9,7 +9,7 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="nosotros" className="py-24 md:py-32 bg-background">
+    <section id="nosotros" className="py-24 md:py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div ref={ref} className="grid md:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -26,7 +26,7 @@ export function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 border-2 border-primary/20 -z-10" />
+            <div className="absolute -bottom-8 -right-8 w-48 h-48 border-2 border-primary/20 -z-10 hidden md:block" />
           </motion.div>
 
           {/* Content */}
